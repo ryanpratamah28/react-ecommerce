@@ -14,35 +14,35 @@ import Dashboard_Admin from '../views/Admin/Dashboard Admin/DashboardAdmin'
 
 // Route
 const router = createBrowserRouter([
-  // User
+    // User
 
-  {
-    path: '/',
-    element: <Home />,
-    errorElement: <ErrorPage />,
-  },
-  {
-    path: '/product',
-    element: <Product_List />,
-  },
+    {
+        path: '/',
+        element: <Home />,
+        errorElement: <ErrorPage />,
+    },
+    {
+        path: '/product',
+        element: <Product_List />,
+    },
 
-  // Admin
+    // Admin
 
-  {
-    path: '/admin',
-    element: <Sidebar_Admin />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: 'dashboard',
-        element: <Dashboard_Admin />,
-      },
-    ],
-  },
+    {
+        path: '/admin',
+        element: <Sidebar_Admin />,
+        errorElement: <ErrorPage />,
+        children: [
+            {
+                path: 'dashboard',
+                element: <Dashboard_Admin />,
+            },
+        ],
+    },
 ])
 
 function Router() {
-  return <RouterProvider router={router} />
+    return <RouterProvider router={router} />
 }
 
 export default Router

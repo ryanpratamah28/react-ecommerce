@@ -1,0 +1,125 @@
+:root {
+    --black-color: #0000;
+    --white-color: #ffff;
+    --light-color: #f8f9fa;
+    --light-dark: #f4f4f4;
+    --grey-color: #535353;
+    --green-color: #2db878;
+}
+
+.container {
+    width: min(100% - 30px, 1320px);
+}
+
+.nav-wrapper .nav-left {
+    width: 80%;
+}
+
+.nav-wrapper .nav-right {
+    width: 20%;
+}
+
+/* Search Bar */
+
+.search-bar .form-control:focus {
+    border-color: var(--green-color) !important;
+    box-shadow: none !important;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar .form-label {
+    position: absolute;
+    top: 0;
+    padding: 7px 0 0 16px;
+    transition: all 200ms;
+    opacity: 0.5;
+    font-weight: 400 !important;
+}
+
+.search-bar .form-control:focus + .form-label,
+.search-bar .form-control:valid + .form-label {
+    padding: 0 5px;
+    background-color: var(--white-color);
+    font-size: 85%;
+    translate: 17px -9px;
+    opacity: 1;
+    z-index: 9999;
+}
+
+/* Shopping cart */
+
+a.shopping-cart {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+a.shopping-cart:hover {
+    -webkit-transform: translateX(-7px);
+    transform: translateX(-7px);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+a.shopping-cart img {
+    width: 100%;
+    max-width: 38px;
+    max-height: 38px;
+}
+
+.total-item {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: -10px;
+    top: -20px;
+}
+
+.total-item p {
+    margin: 0;
+    padding: 4px 8px;
+    font-size: 10px;
+    border-radius: 4px;
+    background-color: #2db878;
+    color: #fff;
+}
+
+@media screen and (max-width: 1400px) {
+    .nav-wrapper .nav-left {
+        width: 75%;
+    }
+
+    .nav-wrapper .nav-right {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 991px) {
+    .nav-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .nav-wrapper .nav-left {
+        width: 100%;
+    }
+
+    .nav-wrapper .nav-right {
+        width: 100%;
+        justify-content: end;
+    }
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 576px) {
+}
